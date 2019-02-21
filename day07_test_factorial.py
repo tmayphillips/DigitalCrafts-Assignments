@@ -1,7 +1,7 @@
 import unittest
 from day07_factorial_with_class import Factorial
 
-class PalindromeTests(unittest.TestCase):
+class FactorialTests(unittest.TestCase):
     def setUp(self):
         self.factorial = Factorial()
 

@@ -1,15 +1,16 @@
 user_input = ""
 shopping_lists = []
+total = 0
 
 from day07_grocery_app_modules import *
-
-
 
 def show_menu():
     print("Enter 1 to add shopping list: ")
     print("Enter 2 to add grocery item: ")
     print("Enter 3 to view shopping lists: ")
     print("Enter 4 to delete a shopping list: ")
+    print("Enter 5 to delete a grocery item: ")
+    print("Enter 6 to total the grocery cost: ")
     print("Enter q to quit: ")
 
 def add_shopping_list():
@@ -46,14 +47,37 @@ def add_grocery_item():
 
 def delete_shopping_list():
     for index in range(0,len(shopping_lists)):
-            shopping_list = shopping_lists[index]
-            print(f"{index + 1} - {shopping_list.name} - {shopping_list.address}")
+        shopping_list = shopping_lists[index]
+        print(f"{index + 1} - {shopping_list.name} - {shopping_list.address}")
     shopping_list_number = int(input("Enter the shopping list number: "))
-    shopping_list = shopping_lists[shopping_list_number -1]
-    #shopping_list_name = shopping_lists[shopping_list]
-    c = ShoppingList(shopping_list.name,shopping_list.address)
-#c.shopping_list_delete = ShoppingList(shopping_list.name,shopping_list.address)
-    c.delete_list(shopping_list_number-1,shopping_lists)
+    del shopping_lists[shopping_list_number -1]
+
+def delete_grocery_item():
+    for index in range(0,len(shopping_lists)):
+        shopping_list = shopping_lists[index]
+        print(f"{index + 1} - {shopping_list.name} - {shopping_list.address}")
+        for x in range(0,len(shopping_list.grocery_item)):
+            grocery_item = shopping_list.grocery_item[x]
+            print(f"{x + 1} - {grocery_item.name}")
+
+    shopping_list_number = int(input("Enter the store number: "))     
+    grocery_item_number = int(input("Enter the grocery item number: "))
+    shopping_list = shopping_lists[shopping_list_number - 1]
+    del shopping_list.grocery_item[grocery_item_number - 1]
+
+def view_total():
+    grand_total = 0
+    for index in range(0,len(shopping_lists)):
+        shopping_list = shopping_lists[index]
+        print(f"{index + 1} - {shopping_list.name} - {shopping_list.address}")
+        total = 0
+        for grocery_item in shopping_list.grocery_item:
+            print(f"{grocery_item.name} - {grocery_item.price} - {grocery_item.quantity}")
+            total += (grocery_item.price * grocery_item.quantity)
+            grand_total += (grocery_item.price * grocery_item.quantity)
+        print(f"The total for {shopping_list.name} is ${total}.")
+    print(f"The grand total for all stores is ${grand_total}")
+
 
 while user_input != "q":
     show_menu()
@@ -67,6 +91,10 @@ while user_input != "q":
             view_all_shopping_lists()
         if user_input == "4":
             delete_shopping_list()
+        if user_input == "5":
+            delete_grocery_item()
+        if user_input == "6":
+            view_total()
     except ValueError:
         "Please make sure you enter a number"
 
