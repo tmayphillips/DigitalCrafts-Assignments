@@ -39,7 +39,6 @@ for index in range(1, 13):
     globals()['table_%s' % index] = PoolTable(index)
     #pool_tables['table_%s' % index] = PoolTable('table_%s' % index)
 
-
 def view_tables():
     for table in pool_tables:
         print(table)
@@ -65,6 +64,12 @@ def checkin():
     user_input = input("What pool table would you like to checkin? ")
     if eval(f"{'table_%s' % user_input}").is_available == False:
         eval(f"{'table_%s' % user_input}").checkin()
+        date = datetime.now().date()
+        with open('%s.txt' % date, 'w') as file_object:
+            file_object.write(str(eval(f"{'table_%s' % user_input}").table_num))
+            file_object.write(str(eval(f"{'table_%s' % user_input}").is_available))
+            file_object.write(str(eval(f"{'table_%s' % user_input}").time_played))
+            #file_object.write("\n")
     else:
         print("That table is not checked out.")
 

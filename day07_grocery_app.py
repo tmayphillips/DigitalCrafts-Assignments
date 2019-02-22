@@ -61,7 +61,7 @@ def delete_grocery_item():
             print(f"{x + 1} - {grocery_item.name}")
 
     shopping_list_number = int(input("Enter the store number: "))     
-    grocery_item_number = int(input("Enter the grocery item number: "))
+    grocery_item_number = int(input("Enter the grocery item numbe: "))
     shopping_list = shopping_lists[shopping_list_number - 1]
     del shopping_list.grocery_item[grocery_item_number - 1]
 
