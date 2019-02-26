@@ -1,0 +1,84 @@
+.topnav {
+  background-color: #62A7F2;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a.active {
+  font-weight: bold;
+  padding-top: 16px;
+}
+
+.topnav a.inactive {
+  padding-top: 16px;
+  font-weight: lighter;
+}
+
+.topnav a.main {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.gray_content {
+  width: 90%;
+  background-color: #DDDEE0;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-clip: content-box;
+}
+
+.white_content {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.white_title {
+  color: #62A7F2;
+  font-size: 24px
+}
+
+.orange_row {
+  background-color: #E69641;
+  color: white;
+  font-size: bold;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.card {
+  background-color: #DDDEE0;
+  color: black;
+  align: center;
+  width: 30%;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.large {
+  font-size: 40px;
+  align: center;
+}
+
+.small{
+  font-size: 20px;
+  color: gray;
+  align: center;
+}
+
+td {
+  padding:0 50px 0 50px;
+}
