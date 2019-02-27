@@ -1,0 +1,14 @@
+#menu {
+  display: none;
+}
+
+#mobile-menu {
+  list-style: none;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+#menu li {
+  padding: 10px;
+}
