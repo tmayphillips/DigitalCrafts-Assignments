@@ -19,9 +19,51 @@
 #menu a {
   color: white;
 }
+
+#menu img {
+  height: 25px;
+}
+
 #menu-mobile {
   display: none;
 }
+
+#mobile-holidays {
+  display: none;
+}
+
+#mobile-iphonexs {
+  display: none;
+}
+
+#mobile-iphonexr {
+  display: none;
+}
+
+#mobile-watch {
+  display: none;
+}
+
+#mobile-ipadpro {
+  display: none;
+}
+
+#mobile-macbookair {
+  display: none;
+}
+
+#mobile-music {
+  display: none;
+}
+
+#mobile-airpods {
+  display: none;
+}
+
+#mobile-giveback {
+  display: none;
+}
+
 
 .centered {
   position: relative;
@@ -29,9 +71,7 @@
   left: 50%;
 }
 
-#menu img {
-  height: 25px;
-}
+
 
 .fullScreen {
   width: 100%;

@@ -1,0 +1,35 @@
+#menu {
+  list-style: none;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+#menu li {
+  padding: 10px;
+}
+
+#banner {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 10px;
+}
+
+.card {
+  display: inline-block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 175px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  text-align: center;
+  display: inline-block;
+}
+
+.wrap img {
+  width: 150px;
+  height: 150px;
+}

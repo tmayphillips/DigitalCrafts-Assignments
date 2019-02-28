@@ -1,9 +1,26 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" media="only screen and (max-device-width: 600px)" href="mobile.css">
-  <link rel="stylesheet" media="only screen and (min-device-width: 601px)" href="desktop.css">
+  <link rel="stylesheet" media="only screen and (max-width: 600px)" href="mobile.css">
+  <link rel="stylesheet" media="only screen and (min-width: 601px)" href="desktop.css">
+  <script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
 
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
 </head>
 <body>
   <div id="container">
@@ -22,40 +39,49 @@
   </ul>
 
   <div id="menu-mobile" class="dropdown">
-    <span>Mouse over me</span>
-    <div class="dropdown-content">
-      <p><a href="#">Mac</a></p>
-      <p><a href="#">iPad</a></p>
-      <p><a href="#">iPhone</a></p>
-      <p><a href="#">iWatch</a></p>
-      <p><a href="#">Apple TV</a></p>
+    <button onclick="myFunction()" class="dropbtn"><img src="apple.png"></button>
+    <div id"myDropdown" class="dropdown-content">
+      <a href="#">Mac</a>
+      <a href="#">iPad</a>
+      <a href="#">iPhone</a>
+      <a href="#">iWatch</a>
+      <a href="#">Apple TV</a>
     </div>
   </div>
 
   <div>
-    <a href="#"><img class="fullScreen" src="1.png"></a>
+    <a href="#"><img id="desktop-holidays" class="fullScreen" src="1.png"></a>
+    <a href="#"><img id="mobile-holidays" class="fullScreen" src="11.png"></a>
   </div>
   <div class="center">
     <a href="#"><img class="fullScreen" src="2_desktop.png"></a>
     <a href="#">Donate to support California Wildfires Relief ></a>
   </div>
   <div>
-    <a href="#"><img class="fullScreen" src="3.png"></a>
+    <a href="#"><img id="desktop-iphonexs" class="fullScreen" src="3.png"></a>
+    <a href="#"><img id="mobile-iphonexs" class="fullScreen" src="12.png"></a>
   </div>
   <div>
-    <a href="#"><img class="fullScreen" src="4.png"></a>
+    <a href="#"><img id="desktop-iphonexr" class="fullScreen" src="4.png"></a>
+    <a href="#"><img id="mobile-iphonexr" class="fullScreen" src="13.png"></a>
   </div>
   <div>
-    <a href="#"><img class="firstHalf" src="5.png"></a>
-    <a href="#"><img class="secondHalf" src="6.png"></a>
+    <a href="#"><img id="desktop-watch" class="firstHalf" src="5.png"></a>\
+    <a href="#"><img id="mobile-watch" class="fullScreen" src="14.png"></a>
+    <a href="#"><img id="desktop-ipadpro" class="secondHalf" src="6.png"></a>
+    <a href="#"><img id="mobile-macbookair" class="fullScreen" src="15.png"></a>
   </div>
   <div>
-    <a href="#"><img class="firstHalf" src="7.png"></a>
-    <a href="#"><img class="secondHalf" src="8.png"></a>
+    <a href="#"><img id="desktop-macbookair" class="firstHalf" src="7.png"></a>
+    <a href="#"><img id="mobile-macbookair" class="fullScreen" src="16.png"></a>
+    <a href="#"><img id="desktop-music" class="secondHalf" src="8.png"></a>
+    <a href="#"><img id="mobile-music" class="fullScreen" src="17.png"></a>
   </div>
   <div>
-    <a href="#"><img class="firstHalf" src="9.png"></a>
-    <a href="#"><img class="secondHalf" src="10.png"></a>
+    <a href="#"><img id="desktop-airpods" class="firstHalf" src="9.png"></a>
+    <a href="#"><img id="mobile-airpods" class="fullScreen" src="18.png"></a>
+    <a href="#"><img id="desktop-giveback" class="secondHalf" src="10.png"></a>
+    <a href="#"><img id="mobile-giveback" class="fullScreen" src="10.png"></a>
   </div>
 
 <div  class="footer">
@@ -121,6 +147,8 @@
   <div><a href="#">Contact Apple</a></div>
 </div>
 </div>
+
+
 
 </body>
 </html>
