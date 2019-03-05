@@ -1,0 +1,16 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+textarea {
+  max-width: 500px;
+}
+
+form {
+  text-align: center;
+}
+
+h6 {
+  display: inline;
+}

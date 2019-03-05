@@ -1,0 +1,101 @@
+<!-- Day 16 assignments in JS -->
+
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+  <div class="alert alert-primary" role="alert">
+    <form id="palindrome" action="/action_page.php">
+      <h4>See if your word is a palindrome:</h4>
+      <input type="text" name="fname">
+    <button type="button" class="btn btn-primary" onclick="palindrome()">Check</button>
+    </form>
+    <p id="palindrome_output"></p>
+  </div>
+<br>
+<div class="alert alert-success" role="alert">
+      <h4>Remove duplicates</h4>
+      <p>Enter your list of items to remove the duplicates:</p>
+      <textarea id="duplicates" rows=5 cols="50"></textarea>
+    <button type="button" class="btn btn-primary" onclick="duplicates()">Remove those duplicates!</button>
+    <p id="duplicates_output"></p>
+  </div>
+
+  <div class="alert alert-primary" role="alert">
+    <form id="itemIncluded" action="/action_page.php">
+      <h5>Is your item in the list above? Check below:</h5>
+      <input type="text" name="fname">
+    <button type="button" class="btn btn-primary" onclick="itemIncluded()">Let's see!</button>
+    </form>
+    <p id="itemIncluded_output"></p>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    <h4>Get the smallest and largest number</h4>
+    <textarea id="largestSmallest" rows=5 cols="50"></textarea>
+    <button type="button" class="btn btn-primary" onclick="largestSmallest()">Check the smallest and largest!</button>
+    <p id ="smallest_output"></p>
+    <p id="largest_output"></p>
+  </div>
+
+  <div class="alert alert-primary" role="alert">
+    <form id="fizzBuzz" action="/action_page.php">
+      <h4>Fizz Buzz</h4>
+      <h6>If the number is divisible by 3, we'll fizz.</h6>
+      <h6>If divisible by 5, we'll buzz.</h6>
+      <h6>Both... you got yourself a Fizz Buzz!</h6>
+      <input type="text" name="fname">
+    <button type="button" class="btn btn-primary" onclick="fizzBuzz()">Let's Fizz and Buzz!</button>
+    </form>
+    <p id="fizzBuzz_output"></p>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+      <h4>Get your numbers in ascending and descending order</h4>
+      <textarea id="ascendDescend" rows = 5></textarea>
+    <button type="button" class="btn btn-primary" onclick="ascendDescend()">Check</button>
+    <p id="ascend_output"></p>
+    <p id="descend_output"></p>
+  </div>
+
+  <div class="alert alert-primary" role="alert">
+      <form id="bankAccount" action="/action_page.php">
+        <h4>Open a bank account</h4>
+        <h6>First name: </h6><input id="firstName" type="text" name="fname"><br>
+        <h6>Middle name: </h6><input id = "middleName"type="text" name="fname"><br>
+        <h6>Last name: </h6><input id="lastName"type="text" name="fname"><br>
+        <h6>Account Type: </h6><input id="accountType"type="text" name="fname"><br>
+        <h6>Opening deposit: </h6><input id="openDeposit"type="number" name="fname"><br>
+        <br>
+      <button type="button" class="btn btn-primary" onclick="Open()">Open Account</button>
+    </form>
+  </div>
+  <div class="alert alert-Success" role="alert">
+      <form id="transfer" action="/action_page.php">
+        <h4>Transer Money</h4>
+        <h6>First name: </h6><input id="firstName" type="text" name="fname"><br>
+        <h6>Middle name: </h6><input id = "middleName"type="text" name="fname"><br>
+        <h6>Last name: </h6><input id="lastName"type="text" name="fname"><br>
+        <h6>Transfer from: </h6><input id="transferFrom"type="text" name="fname"><br>
+        <h6>Transfer to: </h6><input id="transferTo"type="text" name="fname"><br>
+        <h6>Amount: </h6><input id="transferAmount"type="number" name="fname"><br>
+        <br>
+      <button type="button" class="btn btn-primary" onclick="Transfer()">Transfer</button>
+    </form>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="apps.js"></script>
+</body>
+</html>
