@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  flex-wrap: wrap;
+
+}
+
+li {
+  margin: 15px;
+  word-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+img {
+  max-height: 100px;
+  max-width: auto;
+}
