@@ -45,7 +45,7 @@ function getMoreInfo (imdbID) {
 }
 
 
-// Courtesy of Richard Lorenzini //
+// swal courtesy of Richard Lorenzini //
 function swalAlert(i) {
   swal({
     text: JSON.stringify(i, null, 4),
