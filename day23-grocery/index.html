@@ -5,19 +5,25 @@
   <link rel="stylesheet" href="styles.css"></link>
 </head>
 <body>
-<input id="storeName"></input>
-<button id="submitButton">Submit</button>
-
+<div id="container">
 <input id="emailAddress"></input>
 <input id="password" type="password"></input>
 <button id="signUpUser">Join</button>
 <button id="signInUser">Sign In</button>
-<button id="check">Check</button>
+<button id="signOut">Sign Out</button>
+<div id ="itemList">
+  <h3>Enter a store name to add it to your list</h3>
+<input id="storeName"></input>
+<button id="submitButton">Submit</button>
+<button id="startDispalyStores">Display Stores</button>
+</div>
 
 <ul id = "storesUL"></ul>
 
+<div id="itemBox">
 <h3 id="itemsTitle"></h3>
 <ul id="itemsUL"></ul>
+</div>
 
   <div class="form-popup" id="itemForm" >
     <!--<form id="myForm" class="form-container"> -->
@@ -33,7 +39,7 @@
       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   <!--  </form> -->
   </div>
-
+</div>
 <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>

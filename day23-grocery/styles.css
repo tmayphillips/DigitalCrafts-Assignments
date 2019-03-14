@@ -3,8 +3,13 @@ li {
 }
 
 h3 {
-  color: black 
+  color: black
 }
+
+div {
+  text-align: center;
+}
+
 {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -24,7 +29,6 @@ h3 {
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
-  position: fixed;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }

@@ -7,7 +7,7 @@ let storeTitle = ''
 let storeTextBox = document.getElementById('storeName')
 let signInUser = document.getElementById('signInUser')
 let signUpUser = document.getElementById('signUpUser')
-let check = document.getElementById('check')
+let signOut = document.getElementById('signOut')
 
 database.ref("stores")
 .on("child_added",function(snapshot){
@@ -39,7 +39,14 @@ database.ref("items")
     displayItems()
 })
 
-check.addEventListener('click',function(){
+signOut.addEventListener('click',function(){
+  firebase.auth().signOut().then(function() {
+    document.getElementById("storesUL").style.display = "none";
+    document.getElementById("itemBox").style.display = "none";
+    document.getElementById("itemForm").style.display = "none";
+    location.reload().then(function(){}).catch(function(error) {
+  });
+})
 })
 
 submitButton.addEventListener('click',function(){
@@ -73,11 +80,13 @@ function userName(emailAddress,password) {
   })
 }
 
-firebase.auth().signOut().then(function() {
-}).catch(function(error) {
-});
+
+startDispalyStores.addEventListener('click',function() {
+  displayStores()
+})
 
 function displayStores() {
+  document.getElementById("storesUL").style.display = "block";
   let storeLI = stores.map((store) => {
     if (store.userID == checking()) {
       return `<li>
@@ -94,23 +103,24 @@ function displayStores() {
 
 function displayItems(storeNameForItems) {
   let itemLI = items.map((item) => {
-    console.log(storeNameForItems);
-    console.log(item.store);
-    console.log(items);
+    document.getElementById("itemBox").style.display = "block";
     if (item.userID == checking() && item.store == storeNameForItems) {
-      itemsTitle.innerHTML = item.store
+      itemsTitle.innerHTML = item.store + "   " + `<button onclick="removeItemBox()">Close</button>`
+
       return `<li>
           ${item.name} - ${item.qty}
           <button onclick="deleteItem('${item.key}')">Delete</button>
           </li>`
     } else {
-      console.log("no items");
     }
   })
 
   itemsUL.innerHTML = itemLI.join("")
 }
 
+function removeItemBox() {
+  document.getElementById("itemBox").style.display = "none";
+}
 function deleteStore(storeKey,storeNameForItems) {
       database.ref("stores").child(storeKey).remove()
       items.map((item) => {
@@ -181,7 +191,6 @@ function closeForm() {
 }
 
 function logItems() {
-  console.log(storeTitle);
   let item = document.getElementById('item').value
   let qty = document.getElementById('qty').value
   let itemsRef = database.ref("items")
